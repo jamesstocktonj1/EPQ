@@ -89,6 +89,7 @@
 <layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
 <layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="113" name="IDFDebug" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
@@ -2005,8 +2006,6 @@ EC12E series with push-on switch</description>
 <part name="TXLED" library="Ai_LED" deviceset="LED" device="0603"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R6" library="Ai_Passives" deviceset="RES" device="0603"/>
-<part name="PIN13" library="Ai_LED" deviceset="LED" device="0603"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -2051,6 +2050,25 @@ EC12E series with push-on switch</description>
 <part name="C17" library="Ai_Passives" deviceset="CAP" device="0603"/>
 <part name="C18" library="Ai_Passives" deviceset="CAP" device="0603"/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R7" library="Ai_Passives" deviceset="RES" device="0603"/>
+<part name="PIN1" library="Ai_LED" deviceset="LED" device="0603"/>
+<part name="R8" library="Ai_Passives" deviceset="RES" device="0603" value="22k"/>
+<part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="R9" library="Ai_Passives" deviceset="RES" device="0603"/>
+<part name="PIN2" library="Ai_LED" deviceset="LED" device="0603"/>
+<part name="R10" library="Ai_Passives" deviceset="RES" device="0603"/>
+<part name="R11" library="Ai_Passives" deviceset="RES" device="0603"/>
+<part name="PIN3" library="Ai_LED" deviceset="LED" device="0603"/>
+<part name="PIN4" library="Ai_LED" deviceset="LED" device="0603"/>
+<part name="R12" library="Ai_Passives" deviceset="RES" device="0603"/>
+<part name="PIN5" library="Ai_LED" deviceset="LED" device="0603"/>
+<part name="R13" library="Ai_Passives" deviceset="RES" device="0603"/>
+<part name="PIN6" library="Ai_LED" deviceset="LED" device="0603"/>
+<part name="R14" library="Ai_Passives" deviceset="RES" device="0603"/>
+<part name="PIN7" library="Ai_LED" deviceset="LED" device="0603"/>
+<part name="R15" library="Ai_Passives" deviceset="RES" device="0603"/>
+<part name="PIN8" library="Ai_LED" deviceset="LED" device="0603"/>
+<part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2079,8 +2097,6 @@ EC12E series with push-on switch</description>
 <instance part="TXLED" gate="G$1" x="110.49" y="71.12" rot="R90"/>
 <instance part="GND5" gate="1" x="123.19" y="114.3" rot="R90"/>
 <instance part="GND6" gate="1" x="123.19" y="71.12" rot="R90"/>
-<instance part="R6" gate="G$1" x="96.52" y="88.9"/>
-<instance part="PIN13" gate="G$1" x="110.49" y="88.9" rot="R90"/>
 <instance part="GND7" gate="1" x="123.19" y="88.9" rot="R90"/>
 <instance part="GND8" gate="1" x="33.02" y="218.44"/>
 <instance part="P+4" gate="1" x="33.02" y="248.92"/>
@@ -2134,6 +2150,25 @@ EC12E series with push-on switch</description>
 <instance part="C17" gate="G$1" x="129.54" y="48.26" rot="R90"/>
 <instance part="C18" gate="G$1" x="139.7" y="45.72" rot="R90"/>
 <instance part="GND15" gate="1" x="149.86" y="40.64"/>
+<instance part="R7" gate="G$1" x="93.98" y="40.64"/>
+<instance part="PIN1" gate="G$1" x="111.76" y="40.64" rot="R90"/>
+<instance part="R8" gate="G$1" x="93.98" y="60.96" rot="R180"/>
+<instance part="P+10" gate="1" x="107.95" y="60.96" rot="R270"/>
+<instance part="R9" gate="G$1" x="91.44" y="104.14"/>
+<instance part="PIN2" gate="G$1" x="101.6" y="104.14" rot="R90"/>
+<instance part="R10" gate="G$1" x="91.44" y="101.6"/>
+<instance part="R11" gate="G$1" x="91.44" y="99.06"/>
+<instance part="PIN3" gate="G$1" x="109.22" y="101.6" rot="R90"/>
+<instance part="PIN4" gate="G$1" x="101.6" y="99.06" rot="R90"/>
+<instance part="R12" gate="G$1" x="91.44" y="91.44"/>
+<instance part="PIN5" gate="G$1" x="101.6" y="91.44" rot="R90"/>
+<instance part="R13" gate="G$1" x="90.17" y="73.66"/>
+<instance part="PIN6" gate="G$1" x="102.87" y="73.66" rot="R90"/>
+<instance part="R14" gate="G$1" x="90.17" y="68.58"/>
+<instance part="PIN7" gate="G$1" x="102.87" y="68.58" rot="R90"/>
+<instance part="R15" gate="G$1" x="90.17" y="66.04"/>
+<instance part="PIN8" gate="G$1" x="109.22" y="66.04" rot="R90"/>
+<instance part="GND16" gate="1" x="121.92" y="35.56"/>
 </instances>
 <busses>
 </busses>
@@ -2198,7 +2233,19 @@ EC12E series with push-on switch</description>
 <segment>
 <pinref part="TXLED" gate="G$1" pin="C"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="115.57" y1="71.12" x2="120.65" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="115.57" y1="71.12" x2="118.11" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="PIN6" gate="G$1" pin="C"/>
+<wire x1="118.11" y1="71.12" x2="120.65" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="107.95" y1="73.66" x2="118.11" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="118.11" y1="73.66" x2="118.11" y2="71.12" width="0.1524" layer="91"/>
+<junction x="118.11" y="71.12"/>
+<pinref part="PIN8" gate="G$1" pin="C"/>
+<wire x1="114.3" y1="66.04" x2="118.11" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="118.11" y1="66.04" x2="118.11" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="PIN7" gate="G$1" pin="C"/>
+<wire x1="118.11" y1="68.58" x2="118.11" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="107.95" y1="68.58" x2="118.11" y2="68.58" width="0.1524" layer="91"/>
+<junction x="118.11" y="68.58"/>
 </segment>
 <segment>
 <pinref part="RXLED" gate="G$1" pin="C"/>
@@ -2206,10 +2253,25 @@ EC12E series with push-on switch</description>
 <wire x1="115.57" y1="114.3" x2="120.65" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="PIN13" gate="G$1" pin="C"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="115.57" y1="88.9" x2="116.84" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="88.9" x2="120.65" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="118.11" y1="88.9" x2="119.38" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="88.9" x2="120.65" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="PIN2" gate="G$1" pin="C"/>
+<wire x1="106.68" y1="104.14" x2="118.11" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="118.11" y1="104.14" x2="118.11" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="118.11" y1="101.6" x2="118.11" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="118.11" y1="99.06" x2="118.11" y2="95.25" width="0.1524" layer="91"/>
+<wire x1="118.11" y1="95.25" x2="118.11" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="118.11" y1="91.44" x2="118.11" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="PIN3" gate="G$1" pin="C"/>
+<wire x1="114.3" y1="101.6" x2="118.11" y2="101.6" width="0.1524" layer="91"/>
+<junction x="118.11" y="101.6"/>
+<pinref part="PIN4" gate="G$1" pin="C"/>
+<wire x1="106.68" y1="99.06" x2="118.11" y2="99.06" width="0.1524" layer="91"/>
+<junction x="118.11" y="99.06"/>
+<pinref part="PIN5" gate="G$1" pin="C"/>
+<wire x1="106.68" y1="91.44" x2="118.11" y2="91.44" width="0.1524" layer="91"/>
+<junction x="118.11" y="91.44"/>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
@@ -2374,6 +2436,12 @@ EC12E series with push-on switch</description>
 <wire x1="149.86" y1="53.34" x2="149.86" y2="50.8" width="0.1524" layer="91"/>
 <junction x="149.86" y="50.8"/>
 </segment>
+<segment>
+<pinref part="PIN1" gate="G$1" pin="C"/>
+<wire x1="116.84" y1="40.64" x2="121.92" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="121.92" y1="40.64" x2="121.92" y2="38.1" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -2502,6 +2570,11 @@ EC12E series with push-on switch</description>
 <wire x1="16.51" y1="96.52" x2="16.51" y2="93.98" width="0.1524" layer="91"/>
 <junction x="16.51" y="93.98"/>
 </segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="1"/>
+<pinref part="P+10" gate="1" pin="+5V"/>
+<wire x1="99.06" y1="60.96" x2="105.41" y2="60.96" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -2585,8 +2658,10 @@ EC12E series with push-on switch</description>
 <wire x1="22.86" y1="119.38" x2="22.86" y2="124.46" width="0.1524" layer="91"/>
 <junction x="22.86" y="119.38"/>
 <pinref part="JP9" gate="A" pin="5"/>
-<wire x1="22.86" y1="124.46" x2="165.1" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="124.46" x2="44.45" y2="124.46" width="0.1524" layer="91"/>
 <label x="35.56" y="129.54" size="1.778" layer="95" rot="R180"/>
+<wire x1="44.45" y1="124.46" x2="46.99" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="46.99" y1="124.46" x2="165.1" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -2615,20 +2690,6 @@ EC12E series with push-on switch</description>
 <pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="TXLED" gate="G$1" pin="A"/>
 <wire x1="101.6" y1="71.12" x2="107.95" y2="71.12" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="83.82" y1="88.9" x2="91.44" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="(ICP3/CLK0/OC4A)PC7"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<pinref part="PIN13" gate="G$1" pin="A"/>
-<wire x1="101.6" y1="88.9" x2="107.95" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -2785,6 +2846,125 @@ EC12E series with push-on switch</description>
 <wire x1="3.81" y1="93.98" x2="2.54" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="93.98" x2="2.54" y2="91.44" width="0.1524" layer="91"/>
 <junction x="2.54" y="91.44"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="(HWB)PE2"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="83.82" y1="60.96" x2="88.9" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="PIN1" gate="G$1" pin="A"/>
+<wire x1="99.06" y1="40.64" x2="109.22" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<pinref part="PIN5" gate="G$1" pin="A"/>
+<wire x1="96.52" y1="91.44" x2="99.06" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="PIN4" gate="G$1" pin="A"/>
+<wire x1="96.52" y1="99.06" x2="99.06" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="PIN3" gate="G$1" pin="A"/>
+<wire x1="96.52" y1="101.6" x2="106.68" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="R9" gate="G$1" pin="2"/>
+<pinref part="PIN2" gate="G$1" pin="A"/>
+<wire x1="96.52" y1="104.14" x2="99.06" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$26" class="0">
+<segment>
+<pinref part="R9" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="(PCINT4/ADC11)PB4"/>
+<wire x1="86.36" y1="104.14" x2="83.82" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$27" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="(PCINT5/OC1A/OC4B/ADC12)PB5"/>
+<wire x1="86.36" y1="101.6" x2="83.82" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$28" class="0">
+<segment>
+<pinref part="R11" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="(PCINT6/OC1B/OC4B/ADC13)PB6"/>
+<wire x1="86.36" y1="99.06" x2="83.82" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="(ICP1/ADC8)PD4"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="83.82" y1="73.66" x2="85.09" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="(T1/OC4D/ADC9)PD6"/>
+<pinref part="R14" gate="G$1" pin="1"/>
+<wire x1="83.82" y1="68.58" x2="85.09" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="(T0/OC4D/ADC10)PD7"/>
+<pinref part="R15" gate="G$1" pin="1"/>
+<wire x1="83.82" y1="66.04" x2="85.09" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$33" class="0">
+<segment>
+<pinref part="R13" gate="G$1" pin="2"/>
+<pinref part="PIN6" gate="G$1" pin="A"/>
+<wire x1="95.25" y1="73.66" x2="100.33" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$34" class="0">
+<segment>
+<pinref part="R14" gate="G$1" pin="2"/>
+<pinref part="PIN7" gate="G$1" pin="A"/>
+<wire x1="95.25" y1="68.58" x2="100.33" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$35" class="0">
+<segment>
+<pinref part="R15" gate="G$1" pin="2"/>
+<pinref part="PIN8" gate="G$1" pin="A"/>
+<wire x1="95.25" y1="66.04" x2="106.68" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$29" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="(OC3A/OC4A)PC6"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="83.82" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="(ADC7/TDI)PF7"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="83.82" y1="40.64" x2="88.9" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
