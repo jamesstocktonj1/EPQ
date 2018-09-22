@@ -27,7 +27,7 @@ class Potentiometer {
       preVal = curVal;            //sets the previous value, making way for reading the current value
       curVal = analogRead(PIN);   //reads current value
 
-      return (preVal >> 3) != (curVal >> 3);        // Val >> 4 performs a bitshift, converting 0-1023 to 0-127
+      return (preVal >> 3) != (curVal >> 3);        // Val >> 3 performs a bitshift, converting 0-1023 to 0-127
                                                     // the != compares the new and the old value so return true if they are different
     }
 
