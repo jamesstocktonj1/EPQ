@@ -13,6 +13,10 @@
  * 
  */
 
+#include "Potentiometer.h"      //imports my library
+
+ 
+
 #define PIN A3
 
 

@@ -1,3 +1,7 @@
+//EPQ James Stockton
+
+
+
 
 #ifndef Potentiometer_h
 #define Potentiometer_h
