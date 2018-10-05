@@ -11,7 +11,7 @@
 #include "Potentiometer.h"      //own library 
 
 
-#define PIN A3
+#define PIN A4
 #define CC_num 25
 
 Potentiometer pot(PIN);
@@ -21,9 +21,9 @@ void setup() {
 }
 
 void loop() {
-  if(pot.hasChanged()){
-    controlChange(0, CC_num, pot.getVal());
-    MidiUSB.flush();
+  if(pot.hasChanged()){                               //sees whether the potentiometer has changed (true / false)
+    controlChange(0, CC_num, pot.getVal());           //if it has changed then the midi message will be sent
+    MidiUSB.flush();                                  //this sends the midi data out via usb
   }
   delay(25);
 }

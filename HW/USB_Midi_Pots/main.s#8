@@ -2068,7 +2068,6 @@ EC12E series with push-on switch</description>
 <part name="PIN7" library="Ai_LED" deviceset="LED" device="0603"/>
 <part name="R15" library="Ai_Passives" deviceset="RES" device="0603"/>
 <part name="PIN8" library="Ai_LED" deviceset="LED" device="0603"/>
-<part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2150,8 +2149,8 @@ EC12E series with push-on switch</description>
 <instance part="C17" gate="G$1" x="129.54" y="48.26" rot="R90"/>
 <instance part="C18" gate="G$1" x="139.7" y="45.72" rot="R90"/>
 <instance part="GND15" gate="1" x="149.86" y="40.64"/>
-<instance part="R7" gate="G$1" x="93.98" y="40.64"/>
-<instance part="PIN1" gate="G$1" x="111.76" y="40.64" rot="R90"/>
+<instance part="R7" gate="G$1" x="91.44" y="88.9"/>
+<instance part="PIN1" gate="G$1" x="109.22" y="88.9" rot="R90"/>
 <instance part="R8" gate="G$1" x="93.98" y="60.96" rot="R180"/>
 <instance part="P+10" gate="1" x="107.95" y="60.96" rot="R270"/>
 <instance part="R9" gate="G$1" x="91.44" y="104.14"/>
@@ -2168,7 +2167,6 @@ EC12E series with push-on switch</description>
 <instance part="PIN7" gate="G$1" x="102.87" y="68.58" rot="R90"/>
 <instance part="R15" gate="G$1" x="90.17" y="66.04"/>
 <instance part="PIN8" gate="G$1" x="109.22" y="66.04" rot="R90"/>
-<instance part="GND16" gate="1" x="121.92" y="35.56"/>
 </instances>
 <busses>
 </busses>
@@ -2272,6 +2270,9 @@ EC12E series with push-on switch</description>
 <pinref part="PIN5" gate="G$1" pin="C"/>
 <wire x1="106.68" y1="91.44" x2="118.11" y2="91.44" width="0.1524" layer="91"/>
 <junction x="118.11" y="91.44"/>
+<pinref part="PIN1" gate="G$1" pin="C"/>
+<wire x1="114.3" y1="88.9" x2="119.38" y2="88.9" width="0.1524" layer="91"/>
+<junction x="119.38" y="88.9"/>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
@@ -2435,12 +2436,6 @@ EC12E series with push-on switch</description>
 <wire x1="134.62" y1="53.34" x2="149.86" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="53.34" x2="149.86" y2="50.8" width="0.1524" layer="91"/>
 <junction x="149.86" y="50.8"/>
-</segment>
-<segment>
-<pinref part="PIN1" gate="G$1" pin="C"/>
-<wire x1="116.84" y1="40.64" x2="121.92" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="GND16" gate="1" pin="GND"/>
-<wire x1="121.92" y1="40.64" x2="121.92" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -2859,7 +2854,7 @@ EC12E series with push-on switch</description>
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
 <pinref part="PIN1" gate="G$1" pin="A"/>
-<wire x1="99.06" y1="40.64" x2="109.22" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="88.9" x2="106.68" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -2962,9 +2957,9 @@ EC12E series with push-on switch</description>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="(ADC7/TDI)PF7"/>
+<pinref part="U$1" gate="G$1" pin="(ICP3/CLK0/OC4A)PC7"/>
 <pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="83.82" y1="40.64" x2="88.9" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="88.9" x2="86.36" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

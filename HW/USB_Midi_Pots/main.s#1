@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2906,6 +2906,7 @@ Source: 008-0260-0_E.pdf</description>
 <part name="USB2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
 <part name="R6" library="Ai_Passives" deviceset="RES" device="0603"/>
 <part name="D7" library="Ai_LED" deviceset="LED" device="0603"/>
+<part name="L3" library="Ai_Passives" deviceset="IND" device="0603"/>
 </parts>
 <sheets>
 <sheet>
@@ -3015,6 +3016,7 @@ Source: 008-0260-0_E.pdf</description>
 <instance part="USB2" gate="A" x="-88.9" y="96.52" rot="R180"/>
 <instance part="R6" gate="G$1" x="92.71" y="58.42"/>
 <instance part="D7" gate="G$1" x="109.22" y="58.42" rot="R90"/>
+<instance part="L3" gate="G$1" x="-7.62" y="50.8" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3375,21 +3377,11 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="25.4" y1="60.96" x2="21.59" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="21.59" y1="60.96" x2="21.59" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="21.59" y1="50.8" x2="12.7" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="50.8" x2="-21.59" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="-21.59" y1="50.8" x2="-21.59" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-21.59" y1="58.42" x2="-60.96" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
-<wire x1="-60.96" y1="58.42" x2="-73.66" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="53.34" x2="12.7" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="L3" gate="G$1" pin="2"/>
+<wire x1="-2.54" y1="50.8" x2="12.7" y2="50.8" width="0.1524" layer="91"/>
 <junction x="12.7" y="50.8"/>
-<pinref part="U$2" gate="G$1" pin="VCC"/>
-<wire x1="-60.96" y1="80.01" x2="-60.96" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="-60.96" y1="78.74" x2="-60.96" y2="58.42" width="0.1524" layer="91"/>
-<junction x="-60.96" y="58.42"/>
-<pinref part="USB2" gate="A" pin="4"/>
-<wire x1="-86.36" y1="99.06" x2="-60.96" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-60.96" y1="99.06" x2="-60.96" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="-60.96" y1="96.52" x2="-60.96" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="1"/>
@@ -3912,6 +3904,20 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="R6" gate="G$1" pin="2"/>
 <pinref part="D7" gate="G$1" pin="A"/>
 <wire x1="97.79" y1="58.42" x2="106.68" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$40" class="0">
+<segment>
+<pinref part="L3" gate="G$1" pin="1"/>
+<wire x1="-21.59" y1="50.8" x2="-12.7" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-21.59" y1="50.8" x2="-21.59" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-21.59" y1="58.42" x2="-60.96" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="58.42" x2="-73.66" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="VCC"/>
+<wire x1="-60.96" y1="99.06" x2="-60.96" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-60.96" y="58.42"/>
+<pinref part="USB2" gate="A" pin="4"/>
+<wire x1="-86.36" y1="99.06" x2="-60.96" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
