@@ -5,3 +5,5 @@ https://content.arduino.cc/assets/arduino_micro_schematic.pdf
 http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf
 
 https://www.arduino.cc/en/Hacking/LibraryTutorial
+
+https://en.wikipedia.org/wiki/Decoupling_capacitor
